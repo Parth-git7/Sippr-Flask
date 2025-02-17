@@ -1,0 +1,21 @@
+.col-2:hover{
+    transform: scale(1.075);
+}
+
+.heart {
+    font-size: 30px;
+    /* margin-top: 200px; /* Moves it down */
+    /* top : 50px ;
+    transform: translateY(50px); Moves it down */ 
+    position: absolute;
+    top: 249px; /* Move it down */
+    margin-left: 15px;
+}
+
+.liked {
+    color: red;
+    font-size: 22px; /* Ensures size stays the same */
+    position: absolute;
+    top: 255px; /* Move it down */
+    margin-left: 10px;
+}
