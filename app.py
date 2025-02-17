@@ -103,6 +103,8 @@ def signin():
 
         if user and user.check_password(password):
             session['user_id'] = user.id
+            session['username'] = user.name 
+            session.permanent = True 
             return redirect('/bookstore')
         else:
             return "Invalid email or password!", 401
@@ -129,6 +131,13 @@ def signup():
         return redirect('/signin')
 
     return render_template('signup.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    session.pop('username', None)
+    return redirect('/bookstore')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
